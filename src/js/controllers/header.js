@@ -6,12 +6,24 @@
 
 		let vm = this;
 
-		vm.getNewForcast = function(){
-			var forcast = API.getForcast(vm.cityName);
+		getBlogs();
 
-			forcast.then(response => {
-			  vm.data = response.data.list
+		function getBlogs(){
+			var blogs = API.getBlogs();
+
+			blogs.then(response => {
+				vm.data = response.data.blogs;
 			});
 		}
+
+		vm.saveBlog = function(){
+			var savedBlog = API.saveBlog(vm.form);
+
+			savedBlog.then(function(results){
+				console.log(results);
+				getBlogs();
+			})
+		}
+		
 	});
 })();

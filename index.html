@@ -3,27 +3,23 @@
   <head>
   <link rel="stylesheet" type="text/css" href="main.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <style>
-  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
-  }
-  </style>
   </head>
   <body>
 
     <header class="container" ng-controller='HeaderController as header'>
 
       <div class="row">
-        <form class="col-md-12" ng-submit="header.getNewForcast()">
-          <input type="name" ng-model="header.cityName" placeholder="City">
-          <input type="submit" value="Submit">
-        </form>
 
-        <div class="col-md-3" ng-repeat="day in header.data">
-            <h4>{{day.dt*1000 | date:"MMMM, dd yyyy"}}</h4>
-            <h5>MIN:{{day.temp.min}}</h5>
-            <h5>MAX:{{day.temp.max}}</h5>
-            <h5>{{day.weather[0].description}}
+      <form ng-submit="header.saveBlog()">
+      <input class="form-control" placeholder="Title" ng-model="header.form.title">
+      <textarea placeholder="Blog Content" class="form-control" ng-model="header.form.description"></textarea>
+      <input value="Add" class="btn btn-primary" type="submit"></form>
+      </form>
+
+        <div class="col-md-3 blog" ng-repeat="blog in header.data">
+            <h4>{{blog.title}}</h4>
+            <p>{{blog.description}}</p>
+
         </div> 
       </div>
 

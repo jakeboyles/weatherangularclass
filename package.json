@@ -1,7 +1,7 @@
 {
-  "name": "angulartest",
+  "name": "framework",
   "version": "1.0.0",
-  "description": "Testing",
+  "description": "Example Framework",
   "main": "index.js",
   "scripts": {
     "build": "babel src -d lib",

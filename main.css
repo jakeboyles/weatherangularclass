@@ -1,4 +1,12 @@
-  input.ng-invalid { 
-    background-color:red;
+ [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
   }
-  
+
+input.ng-invalid { 
+	background-color:red;
+}
+
+.blog {
+	height:400px;
+
+  }

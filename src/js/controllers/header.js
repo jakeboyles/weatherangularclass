@@ -2,7 +2,7 @@
     'use strict';
 	angular
 	.module('lecture')
-	.controller('HeaderController', function(API) {
+	.controller('HeaderController', function(API,$scope) {
 
 		let vm = this;
 

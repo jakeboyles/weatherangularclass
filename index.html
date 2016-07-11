@@ -16,10 +16,14 @@
       <input value="Add" class="btn btn-primary" type="submit"></form>
       </form>
 
-        <div class="col-md-3 blog" ng-repeat="blog in header.data">
-            <h4>{{blog.title}}</h4>
-            <p>{{blog.description}}</p>
 
+      <weather city="Anchorage"></weather>
+
+            <weather city="Boston"></weather>
+
+
+        <div class="col-md-3 blog" ng-repeat="blog in header.data">
+                <blog-item blog='{{blog}}'> SUP!</blog-item>
         </div> 
       </div>
 
@@ -27,6 +31,8 @@
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src='lib/js/lecture.js'></script>
+    <script src='lib/js/directives/main.js'></script>
+    <script src='lib/js/directives/weather.js'></script>
     <script src='lib/js/factories/API.js'></script>
     <script src='lib/js/controllers/header.js'></script>
   </body>

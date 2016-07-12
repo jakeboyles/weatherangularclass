@@ -48,8 +48,8 @@
     }
 
     return {
-      getBlogs:getBlogs,
-      saveBlog:saveBlog,
+      getBlogs,
+      saveBlog,
       getWeather
     };
 
